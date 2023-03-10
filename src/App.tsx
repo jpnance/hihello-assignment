@@ -84,27 +84,29 @@ function App() {
 
 	return (
 		<div className="App">
-			<IoDisplay result={input} />
+			<div className="Display">
+				<IoDisplay result={input} />
+			</div>
 			<div className="ButtonGrid">
-				<Button label="AC" handleClick={resetInput} />
-				<Button label="±" handleClick={negateInput} />
-				<Button label="%" handleClick={percentize} />
-				<Button label="0" handleClick={appendDigitToInput.bind(null, 0)} />
-				<Button label="1" handleClick={appendDigitToInput.bind(null, 1)} />
-				<Button label="2" handleClick={appendDigitToInput.bind(null, 2)} />
-				<Button label="3" handleClick={appendDigitToInput.bind(null, 3)} />
-				<Button label="4" handleClick={appendDigitToInput.bind(null, 4)} />
-				<Button label="5" handleClick={appendDigitToInput.bind(null, 5)} />
-				<Button label="6" handleClick={appendDigitToInput.bind(null, 6)} />
-				<Button label="7" handleClick={appendDigitToInput.bind(null, 7)} />
-				<Button label="8" handleClick={appendDigitToInput.bind(null, 8)} />
-				<Button label="9" handleClick={appendDigitToInput.bind(null, 9)} />
-				<Button label="." handleClick={startUsingDecimals} />
-				<Button label="+" handleClick={setOperator.bind(null, 'add')} />
-				<Button label="-" handleClick={setOperator.bind(null, 'subtract')} />
-				<Button label="÷" handleClick={setOperator.bind(null, 'divide')} />
-				<Button label="×" handleClick={setOperator.bind(null, 'multiply')} />
-				<Button label="=" handleClick={computeResult} />
+				<Button type="action" label="AC" handleClick={resetInput} />
+				<Button type="action" label="±" handleClick={negateInput} />
+				<Button type="action" label="%" handleClick={percentize} />
+				<Button type="operation" label="÷" handleClick={setOperator.bind(null, 'divide')} />
+				<Button type="digit" label="7" handleClick={appendDigitToInput.bind(null, 7)} />
+				<Button type="digit" label="8" handleClick={appendDigitToInput.bind(null, 8)} />
+				<Button type="digit" label="9" handleClick={appendDigitToInput.bind(null, 9)} />
+				<Button type="operation" label="×" handleClick={setOperator.bind(null, 'multiply')} />
+				<Button type="digit" label="4" handleClick={appendDigitToInput.bind(null, 4)} />
+				<Button type="digit" label="5" handleClick={appendDigitToInput.bind(null, 5)} />
+				<Button type="digit" label="6" handleClick={appendDigitToInput.bind(null, 6)} />
+				<Button type="operation" label="-" handleClick={setOperator.bind(null, 'subtract')} />
+				<Button type="digit" label="1" handleClick={appendDigitToInput.bind(null, 1)} />
+				<Button type="digit" label="2" handleClick={appendDigitToInput.bind(null, 2)} />
+				<Button type="digit" label="3" handleClick={appendDigitToInput.bind(null, 3)} />
+				<Button type="operation" label="+" handleClick={setOperator.bind(null, 'add')} />
+				<Button type="digit zero" label="0" handleClick={appendDigitToInput.bind(null, 0)} />
+				<Button type="digit" label="." handleClick={startUsingDecimals} />
+				<Button type="operation" label="=" handleClick={computeResult} />
 			</div>
 		</div>
 	);

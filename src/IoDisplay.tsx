@@ -3,7 +3,7 @@ type IoDisplayProps = {
 }
 
 function IoDisplay({ result }: IoDisplayProps) {
-	return <h1>{result}</h1>;
+	return <div>{result}</div>;
 };
 
 export default IoDisplay;

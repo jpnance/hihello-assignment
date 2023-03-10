@@ -1,4 +1,19 @@
+.App {
+	color: white;
+	margin: 0 auto;
+	padding: 1rem;
+	width: 400px;
+}
+
+.App .Display {
+	font-size: 5rem;
+	padding: 1rem;
+	text-align: right;
+}
+
 .App .ButtonGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+	display: grid;
+	font-size: 2em;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0.4em;
 }

@@ -1,5 +1,29 @@
 .Button {
+	background-color: darkgray;
+	border: 1px solid transparent;
+	border-radius: 9999px;
 	cursor: pointer;
-	padding: 1rem;
+	padding: 0.4em;
 	text-align: center;
+	transition: 0.2s;
+}
+
+.Button:hover {
+	opacity: 0.8;
+}
+
+.Button.action {
+	color: black;
+}
+
+.Button.operation {
+	background-color: orange;
+}
+
+.Button.digit {
+	background-color: #333;
+}
+
+.Button.digit.zero {
+	grid-column: 1 / 3;
 }
